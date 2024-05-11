@@ -26,3 +26,9 @@ Então, pronto para a sinfonia do recrutamento com o CV-NALDO? 🎶
 Faça parte dessa orquestra de talentos! 💪
 
 Lembrando que todos os CVs utilizados para teste, foram gerados por IA e não contém nenhuma informação real.
+
+Guia de Uso:
+
+1° Insira sua API KEY no chatbot.html, na parte inferior do codigo, onde está a "API KEY".
+2° Copie o conteúdo de seu CV e cole na barra de pesquisa do CV-NALDO.
+3° Aprecie a experiência.
