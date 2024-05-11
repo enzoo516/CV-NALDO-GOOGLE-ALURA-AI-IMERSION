@@ -148,7 +148,7 @@ body h1+h2 {
 } */
 div.container,
 div#output {  
-    background: linear-gradient(to right,  blue, red, yellow, green);
+    background: linear-gradient(to right,  blue, red, rgb(182, 182, 59), green);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.554);
     flex: 1;
