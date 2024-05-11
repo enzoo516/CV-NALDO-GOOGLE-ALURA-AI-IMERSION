@@ -19,4 +19,6 @@ Bootstrap: Porque até os chatbots merecem um visual elegante. 👔
 Notas Personalizadas: O CV-NALDO vai além do “bom” ou “ruim”. Ele é um crítico musical dos currículos! 🎵
 Otimização: Com base nas notas, ele ajusta o modelo para encontrar os candidatos mais afinados com a vaga. 🎻
 Economia de Tempo: Sua equipe de recrutamento vai aplaudir de pé! Menos tempo analisando, mais tempo entrevistando os melhores. 🕰️
-Então, pronto para a sinfonia do recrutamento com o CV-NALDO? 🎶 Faça parte dessa orquestra de talentos! 💪
+
+Então, pronto para a sinfonia do recrutamento com o CV-NALDO? 🎶 
+Faça parte dessa orquestra de talentos! 💪
