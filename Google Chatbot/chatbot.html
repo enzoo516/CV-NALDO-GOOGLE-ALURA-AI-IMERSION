@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CV-NALDO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@google/generative-ai/dist/gemini.umd.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+<header>
+    <a href="chatbot.html" class="logo">CV-NALDO</a>
+    <ul>
+        <li><a href="chatbot.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</header>
+
+
+<body>
+    <div class="imagem-h1">
+        <img src="img/gemini_logo.png" alt="Descrição da imagem">
+      </div>
+    <h1>CV-NALDO</h1>
+    <h2>Lets Start</h2>
+    <div class = "container">
+        <input type="text" id="prompt"  placeholder="Insira seu CV:" >
+        <button type="button" id="generateButton">vAMo</button>
+    </div>
+    <div
+    id="output">
+    </div>
+
+  
+
+  <script type="importmap">
+    {
+        "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai"
+        //insert the API KEY HERE
+        const chave = "API KEY"
+        //DONT FORGET TO INSERT YOUT API KEY HERE
+        const genAI = new GoogleGenerativeAI(chave)
+        const model = genAI.getGenerativeModel({ model: "gemini-pro" })
+
+        document.querySelector("#generateButton").addEventListener("click", async () => {
+            desactivate();
+            const prompt = document.querySelector("#prompt").value;
+            const question = "De uma nota de 1 a 10 para o meu CV e devolva ele melhorado, se o CV não estiver formatado da maneira: nome, informações de contato, sobre, qualificações, educação, habilidades, idiomas, experiencias profissionais, projetos, cursos. Tente formata-lo para este padrão. Se o CV não tiver pelo menos 3 desses requisitos, de a nota 0 instantaneamente:" + prompt;
+            const output = document.querySelector("#output");
+            try{
+                const result = await model.generateContent(question);
+                const response = await result.response;
+                const text = response.text();
+                const formatedtext = text.replace(/\n/g, "<br>");
+                output.innerHTML = formatedtext;
+            } catch (error) 
+            {
+                output.innerHTML = 'ErrorMessage'
+            }
+            activate();
+        });
+
+        
+        function desactivate() {
+            const generateButton = document.querySelector("#generateButton")
+            generateButton.disabled = true
+            generateButton.innerText = "Hold on..."
+        }
+
+        function activate() {
+            const generateButton = document.querySelector("#generateButton");
+            generateButton.disabled = false
+            generateButton.innerText = "Search"
+        }
+
+    </script>
+    </body>
+    </html>
+
