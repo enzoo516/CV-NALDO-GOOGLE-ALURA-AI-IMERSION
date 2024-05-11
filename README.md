@@ -1,5 +1,7 @@
 # CV-NALDO-GOOGLE-ALURA-AI-IMERSION
 
+PS: NÃO ESQUEÇA DE INSERIR SUA API KEY NO CHATBOT.HTML
+
 CV-NALDO vai ser como um maestro das notas, afinando os currículos e entregando um modelo otimizado. 🎵
 
 Aqui está a nova versão do nosso chatbot:
