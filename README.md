@@ -24,3 +24,5 @@ Economia de Tempo: Sua equipe de recrutamento vai aplaudir de pé! Menos tempo a
 
 Então, pronto para a sinfonia do recrutamento com o CV-NALDO? 🎶 
 Faça parte dessa orquestra de talentos! 💪
+
+Lembrando que todos os CVs utilizados para teste, foram gerados por IA e não contém nenhuma informação real.
